@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'zafira-lounge',
+	'hostname' => '103.163.138.109',
+	'username' => 'zafiralo_zafira',
+	'password' => 'Zafiralo123!@#',
+	'database' => 'zafiralo_zafira',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
