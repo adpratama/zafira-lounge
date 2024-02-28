@@ -66,7 +66,7 @@ class Invoice extends CI_Controller
 		$hargas = $this->input->post('harga');
 		$totals = $this->input->post('total');
 
-		$id_user = $this->session->userdata('id_user');
+		$id_user = $this->session->userdata('user_id');
 		$diskon = $this->input->post('diskon');
 		$nominal = preg_replace('/[^a-zA-Z0-9\']/', '', $this->input->post('nominal'));
 		$besaran_diskon = preg_replace('/[^a-zA-Z0-9\']/', '', $this->input->post('besaran_diskon'));
