@@ -8,7 +8,7 @@ class Dashboard extends CI_Controller
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->helper('string');
-		$this->load->model(['M_Auth']);
+		$this->load->model(['M_Auth', 'M_Reservation']);
 		$this->load->helper('date');
 
 		if (!$this->session->userdata('is_logged_in')) {
@@ -23,6 +23,11 @@ class Dashboard extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('pages/index');
+		$data = [
+			'title' => 'Dashboard',
+			'pages' => 'pages/dashboard/v_dashboard',
+			'reservations' => $this->M_Reservation->incoming_reservations()
+		];
+		$this->load->view('pages/index', $data);
 	}
 }

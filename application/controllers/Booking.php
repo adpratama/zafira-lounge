@@ -6,16 +6,16 @@ class Booking extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(['M_Lounge', 'M_Booking']);
+        $this->load->model(['M_Lounge', 'M_Reservation']);
         $this->load->helper(['string', 'url', 'date', 'number']);
-        $this->load->library(['session']);
+        $this->load->library(['session', 'Api_Whatsapp']);
     }
 
-    public function form_booking()
+    public function form_reservation()
     {
         $data = [
             'lounges' => $this->M_Lounge->list(),
-            'pages' => 'pages/v_form_booking',
+            'pages' => 'pages/v_form_reservation',
         ];
         $this->load->view('index', $data);
     }
@@ -29,7 +29,7 @@ class Booking extends CI_Controller
         $total = preg_replace('/\./', '', $this->input->post('total'));
         $phone_number = preg_replace('/\+/', '', $this->input->post('phone_number'));
 
-        $max_num = $this->M_Booking->select_max();
+        $max_num = $this->M_Reservation->select_max();
 
         if (!$max_num['max']) {
             $no_urut = 1; // Nilai Proses
@@ -37,7 +37,7 @@ class Booking extends CI_Controller
             $no_urut = $max_num['max'] + 1;
         }
 
-        $no_reservasi = sprintf("%06d", $no_urut);
+        $no_reservasi = 'ZFR' . sprintf("%06d", $no_urut);
 
         $data = [
             'id_lounge' => $this->input->post('lounge'),
@@ -50,12 +50,23 @@ class Booking extends CI_Controller
             'phone_number' => trim($phone_number),
             'created_at' => date('Y-m-d H:i:s'),
             'no_urut' => $no_urut,
-            'no_reservasi' => 'ZFR' . $no_reservasi,
+            'no_reservasi' => $no_reservasi,
         ];
 
-        if ($this->M_Booking->add_reservation($data)) {
+        if ($this->M_Reservation->add_reservation($data)) {
+
+            $wa_pemesan = $phone_number;
+
+            $msg2 = 'Halo, kak *' . $this->input->post('customer_name') . '*.%0aTerima kasih sudah menghubungi kami. %0aNomor reservasi *' . $no_reservasi . '*%0aReservasi anda akan segera kami proses. Mohon ditunggu ya.';
+
+            $this->api_whatsapp->wa_notif($msg2, $wa_pemesan);
             $this->session->set_flashdata('message_name', 'The reservation has been successfully created. Please wait for the confirmation.');
-            // After that you need to used redirect function instead of load view such as 
+
+            redirect("home");
+        } else {
+
+            $this->session->set_flashdata('message_error', $this->db->_error_message());
+
             redirect("home");
         }
     }

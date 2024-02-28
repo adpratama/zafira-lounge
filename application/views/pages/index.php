@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin</title>
+    <title><?= $title ?> - Zafira Lounge</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,7 +30,7 @@
     <link href="<?= base_url() ?>assets/css/style.css" rel="stylesheet">
 
     <!-- =======================================================
-  * Template Name: NiceAdmin
+  * Template Name: Zafira Lounge
   * Updated: Mar 09 2023 with Bootstrap v5.2.3
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -49,8 +49,8 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="<?= base_url() ?>" class="logo d-flex align-items-center">
-                <img src="<?= base_url() ?>assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">NiceAdmin</span>
+                <!-- <img src="<?= base_url() ?>assets/img/logo.png" alt=""> -->
+                <span class="d-none d-lg-block">Zafira Lounge</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -108,6 +108,27 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link  <?php if ($this->uri->segment(2) != 'booking') echo 'collapsed' ?>" href="<?= base_url('dash/booking') ?>">
+                    <i class="bi bi-grid"></i>
+                    <span>Reservation</span>
+                </a>
+            </li>
+
+            <li class="nav-heading">Invoice kegiatan</li>
+            <li class="nav-item">
+                <a class="nav-link  <?php if ($this->uri->segment(2) != 'invoice') echo 'collapsed' ?>" href="<?= base_url('dash/invoice') ?>">
+                    <i class="bi bi-grid"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  <?php if ($this->uri->segment(2) != 'customer') echo 'collapsed' ?>" href="<?= base_url('dash/customer') ?>">
+                    <i class="bi bi-grid"></i>
+                    <span>Customer</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link collapsed btn-logout" href="<?= base_url('auth/logout') ?>">
                     <i class="bi bi-box-arrow-right"></i>
                     <span>Sign out</span>
@@ -131,7 +152,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Zafira Lounge</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->

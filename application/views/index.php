@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Montana</title>
+	<title>Zafira Garden</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,6 +35,7 @@
 	<!-- header-start -->
 
 	<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message_name') ?>"></div>
+	<div class="flash-data-error" data-flashdata="<?= $this->session->flashdata('message_error') ?>"></div>
 	<header>
 		<div class="header-area ">
 			<div id="sticky-header" class="main-header-area">
@@ -66,7 +67,7 @@
 						<div class="col-xl-2 col-lg-2">
 							<div class="logo-img">
 								<a href="index.html">
-									<img src="<?= base_url() ?>assets/front/img/logo.png" alt="">
+									<img src="<?= base_url() ?>assets/front/img/logo.jpg" alt="" style="width: 112px">
 								</a>
 							</div>
 						</div>
@@ -130,7 +131,7 @@
 								Reservation
 							</h3>
 							<p class="footer_text">+10 367 267 2678 <br>
-								reservation@montana.com</p>
+								reservation@Zafira Garden.com</p>
 						</div>
 					</div>
 					<div class="col-xl-2 col-md-6 col-lg-2">
@@ -205,7 +206,7 @@
 	<form id="test-form" class="white-popup-block mfp-hide" action="<?= base_url('booking/add') ?>" method="POST">
 		<div class="popup_box ">
 			<div class="popup_inner">
-				<h3>Check Availability</h3>
+				<h3>Booking form</h3>
 				<div class="row">
 					<div class="col-xl-6">
 						<input name="customer_name" class="form-control" data-label="Name" placeholder="Enter your name">
@@ -285,132 +286,18 @@
 	<script src="<?= base_url() ?>assets/front/js/mail-script.js"></script>
 
 	<script src="<?= base_url() ?>assets/front/js/main.js"></script>
-	<script>
-		$('#datepicker').datepicker({
-			iconsLibrary: 'fontawesome',
-			icons: {
-				rightIcon: '<span class="fa fa-caret-down"></span>'
-			},
-			minDate: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
-		});
-		$('#datepicker2').datepicker({
-			iconsLibrary: 'fontawesome',
-			icons: {
-				rightIcon: '<span class="fa fa-caret-down"></span>'
-			},
-			minDate: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
-		});
-	</script>
+	<script src="<?= base_url() ?>assets/front/js/script.js"></script>
+
 	<script type="text/javascript" src="https://repo.rachmat.id/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>
-		// batasi tanggal sebelum H+1
-		var today = new Date();
-		var tomorrow = new Date(today);
-		tomorrow.setDate(tomorrow.getDate() + 1);
-
-		var dd = String(tomorrow.getDate()).padStart(2, '0');
-		var mm = String(tomorrow.getMonth() + 1).padStart(2, '0'); //January is 0!
-		var yyyy = tomorrow.getFullYear();
-
-		tomorrow = yyyy + '-' + mm + '-' + dd;
-		document.getElementById("datepicker").setAttribute("min", tomorrow);
-
-
-		// hitung total
-		function calculateTotal() {
-			var pax = parseInt(document.getElementById("pax").value);
-			var pricePerPax = parseInt(document.getElementById("lounge").options[document.getElementById("lounge").selectedIndex].getAttribute('data-price'));
-
-			var totalPrice = pax * pricePerPax;
-
-			if (isNaN(pricePerPax)) {
-				pricePerPax = 0;
-			}
-
-			if (isNaN(totalPrice)) {
-				totalPrice = 0;
-			}
-			document.getElementById("price").value = pricePerPax.toLocaleString('id-ID');
-			document.getElementById("total").value = totalPrice.toLocaleString('id-ID');
-		}
-
-
-		// fungsi onchange lounge
-		document.getElementById("lounge").onchange = function() {
-			var pricePerPax = parseInt(this.options[this.selectedIndex].getAttribute('data-price'));
-			var formattedPrice = pricePerPax.toLocaleString('id-ID'); // Format price as currency
-			document.getElementById("price").value = formattedPrice;
-			calculateTotal(); // Recalculate total when room type changes
-		};
-
-
-		// input pax maksimal 1000
-		document.getElementById("pax").addEventListener("input", function() {
-			var value = this.value;
-			if (!(/^\d*$/.test(value))) {
-				this.value = value.slice(0, -1); // Menghapus karakter terakhir yang tidak valid
-			} else {
-				var intValue = parseInt(value);
-				if (intValue > 1000) {
-					this.value = "1000"; // Membatasi nilai maksimum menjadi 1000
-				}
-			}
-		});
-
-		// Saat halaman dimuat, cek apakah ada nilai dari input pax, jika ada, hitung totalnya
-		var paxValue = parseInt(document.getElementById("pax").value);
-		if (!isNaN(paxValue)) {
-			calculateTotal();
-		}
-
-		// Fungsi untuk memeriksa apakah semua input telah diisi
-		function validateForm() {
-			var requiredInputs = ["customer_name", "email", "phone_number", "booking_date", "pax", "lounge"];
-			var emptyFields = [];
-			requiredInputs.forEach(function(inputName) {
-				var input = document.getElementsByName(inputName)[0]; // Ambil elemen input berdasarkan nama
-				if (!input.value.trim()) { // Periksa apakah nilai input tidak kosong
-					emptyFields.push(input.getAttribute("data-label")); // Jika kosong, tambahkan label input ke dalam array emptyFields
-				}
-			});
-
-			return emptyFields; // Kembalikan array emptyFields yang berisi label input yang belum diisi
-		}
-
-		// Konfirmasi sebelum booking
-		$(".boxed-btn3").on("click", function(e) {
-			e.preventDefault();
-			const form = $(this).parents("form");
-
-			var emptyFields = validateForm();
-			if (emptyFields.length === 0) {
-				Swal.fire({
-					title: "Are you certain the input data is accurate??",
-					text: "You won't be able to revert this!",
-					icon: "warning",
-					showCancelButton: true,
-					confirmButtonColor: "#3085d6",
-					cancelButtonColor: "#d33",
-					confirmButtonText: "Yes, confirm!",
-				}).then((result) => {
-					if (result.isConfirmed) form.submit();
-				});
-			} else {
-				// Menampilkan pesan SweetAlert dengan daftar field yang belum diisi
-				var errorMessage = "Please fill out all required fields:";
-				for (var i = 0; i < emptyFields.length; i++) {
-					errorMessage += "\n- " + emptyFields[i];
-				}
-
-				Swal.fire({
-					title: "Input Required",
-					text: errorMessage,
-					icon: "error",
-					confirmButtonText: "OK",
-				});
-			}
+		$("#datepicker2").datepicker({
+			iconsLibrary: "fontawesome",
+			icons: {
+				rightIcon: '<span class="fa fa-caret-down"></span>',
+			},
+			minDate: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
 		});
 
 		const flashdata = $(".flash-data").data("flashdata");
@@ -422,8 +309,16 @@
 				icon: "success",
 			});
 		}
-	</script>
 
+		const flashdata_error = $(".flash-data-error").data("flashdata");
+		if (flashdata_error) {
+			Swal.fire({
+				title: "Error!! ",
+				text: flashdata_error,
+				icon: "error",
+			});
+		}
+	</script>
 </body>
 
 </html>

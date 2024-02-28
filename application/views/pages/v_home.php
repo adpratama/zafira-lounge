@@ -132,7 +132,7 @@
     <div class="rooms_here">
         <?php
         foreach ($lounges as $l) :
-            $price = $l->harga_per_pax / 1000;
+            $price = $l->price_per_pax / 1000;
         ?>
             <div class="single_rooms">
                 <div class="room_thumb">
@@ -140,9 +140,9 @@
                     <div class="room_heading d-flex justify-content-between align-items-center">
                         <div class="room_heading_inner">
                             <span>From Rp<?= $price ?>k/day</span>
-                            <h3><?= $l->nama_lounge ?></h3>
+                            <h3><?= $l->lounge_name ?></h3>
                         </div>
-                        <a href="#" class="line-button">book now</a>
+                        <a href="#test-form" class="line-button popup-with-form">book now</a>
                     </div>
                 </div>
             </div>
