@@ -96,19 +96,19 @@
                 <td><?= $invoice['lounge_name'] ?></td>
                 <td class="text-right"><?= number_format($invoice['price']) ?></td>
                 <td class="text-right"><?= number_format($invoice['pax']) ?></td>
-                <td class="text-right"><?= number_format($invoice['total']) ?></td>
+                <td class="text-right"><?= number_format($invoice['subtotal']) ?></td>
             </tr>
             <tr>
                 <td class="" colspan="4">SUBTOTAL</td>
-                <td class="text-right"><?= number_format($invoice['total']) ?></td>
+                <td class="text-right"><?= number_format($invoice['subtotal']) ?></td>
             </tr>
             <tr>
                 <td class="" colspan="4">PPN</td>
-                <td class="text-right"><?= number_format($invoice['total'] * 0.11) ?></td>
+                <td class="text-right"><?= number_format($invoice['tax']) ?></td>
             </tr>
             <tr>
                 <td class="" colspan="4">GRAND TOTAL</td>
-                <td class="text-right"><?= number_format($invoice['total'] + ($invoice['total'] * 0.11)) ?></td>
+                <td class="text-right"><?= number_format($invoice['total']) ?></td>
             </tr>
             <tr>
                 <td colspan="5"><?= terbilang($invoice['total']) ?> Rupiah</td>

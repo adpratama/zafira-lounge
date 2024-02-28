@@ -25,17 +25,36 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/front/css/slicknav.css">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/front/css/style.css">
 	<!-- <link rel="stylesheet" href="<?= base_url() ?>assets/front/css/responsive.css"> -->
+	<style>
+		/* width */
+		::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px grey;
+			border-radius: 2px;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #38a4ff;
+			border-radius: 2px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #007bff;
+		}
+	</style>
 </head>
 
 <body>
-	<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-	<!-- header-start -->
-
 	<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message_name') ?>"></div>
 	<div class="flash-data-error" data-flashdata="<?= $this->session->flashdata('message_error') ?>"></div>
+
+	<!-- header-start -->
 	<header>
 		<div class="header-area ">
 			<div id="sticky-header" class="main-header-area">
@@ -93,7 +112,10 @@
 									</ul>
 								</div>
 								<div class="book_btn d-none d-lg-block">
-									<a class="popup-with-form" href="#test-form">Book A Room</a>
+									<!-- <a class="popup-with-form d-block" href="#test-form">Book A Room</a> -->
+									<button type="button" class="genric-btn info" data-toggle="modal" data-target="#exampleModal">
+										Book A Room
+									</button>
 								</div>
 							</div>
 						</div>
@@ -202,61 +224,105 @@
 
 	<!-- link that opens popup -->
 
-	<!-- form itself end-->
-	<form id="test-form" class="white-popup-block mfp-hide" action="<?= base_url('booking/add') ?>" method="POST">
-		<div class="popup_box ">
-			<div class="popup_inner">
-				<h3>Booking form</h3>
-				<div class="row">
-					<div class="col-xl-6">
-						<input name="customer_name" class="form-control" data-label="Name" placeholder="Enter your name">
-					</div>
-					<div class="col-xl-6">
-						<input name="email" class="form-control" data-label="Email" placeholder="Enter your email">
-					</div>
+
+
+	<div class="book-container d-block d-xs-block d-sm-block d-md-block d-lg-none">
+		<button type="button" class="" data-toggle="modal" data-target="#exampleModal">
+			Book A Room
+		</button>
+	</div>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Booking form</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
-				<div class="row mt-3">
-					<div class="col-xl-6">
-						<input name="phone_number" class="form-control" data-label="Whatsapp number" placeholder="Enter whatsapp number. ex: 62811">
+				<form class="" action="<?= base_url('booking/add') ?>" method="POST">
+					<div class="modal-body">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="customer_name">Name</label>
+									<input name="customer_name" class="form-control" data-label="Name" placeholder="Enter your name">
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="email">Email address</label>
+									<input name="email" class="form-control" data-label="Email" placeholder="Enter your email">
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="phone_number">Whatsapp number</label>
+									<input name="phone_number" class="form-control" data-label="book number" placeholder="Enter book number. ex: 62811">
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="booking_date">Booking date</label>
+									<input name="booking_date" id="datepicker" data-label="Booking date" placeholder="Booking date">
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="pax">Pax</label>
+									<input name="pax" id="pax" class="form-control" data-label="Pax" placeholder="Enter pax" oninput="calculateTotal()" value="<?= $this->input->post('pax') ?>">
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="Lounge">Room type</label>
+									<select name="lounge" class="form-control" id="lounge" data-label="Room type">
+										<!-- <option data-display="Room type">Room type</option> -->
+										<?php
+										foreach ($lounges as $l) :
+										?>
+											<option data-price="<?= $l->price_per_pax ?>" value="<?= $l->Id ?>"><?= $l->lounge_name ?></option>
+										<?php
+										endforeach;
+										?>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="price">Price</label>
+									<input type="text" class="form-control" name="price" id="price" data-label="Price" placeholder="Price" value="0" readonly>
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="subtotal">Subtotal</label>
+									<input type="text" class="form-control" name="subtotal" id="subtotal" value="0" readonly>
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="tax">Tax</label>
+									<input type="text" class="form-control" name="tax" id="tax" data-label="Tax" placeholder="Tax" value="0" readonly>
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-group">
+									<label for="total">Total</label>
+									<input type="text" class="form-control" name="total" id="total" value="0" readonly>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-xl-6">
-						<input name="booking_date" id="datepicker" data-label="Booking date" placeholder="Booking date">
+					<div class="modal-footer">
+						<button type="button" class="genric-btn primary" data-dismiss="modal">Close</button>
+						<button type="submit" class="genric-btn info">Book now</button>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xl-6">
-						<input name="pax" id="pax" class="form-control" data-label="Pax" placeholder="Enter pax" oninput="calculateTotal()" value="<?= $this->input->post('pax') ?>">
-					</div>
-					<div class="col-xl-6">
-						<select name="lounge" class="form-control" id="lounge" data-label="Room type">
-							<option data-display="Room type">Room type</option>
-							<?php
-							foreach ($lounges as $l) :
-							?>
-								<option data-price="<?= $l->price_per_pax ?>" value="<?= $l->Id ?>"><?= $l->lounge_name ?></option>
-							<?php
-							endforeach;
-							?>
-						</select>
-					</div>
-				</div>
-				<div class="row mt-3">
-					<div class="col-xl-6">
-						<input type="text" class="form-control" name="price" id="price" data-label="Price" placeholder="Price" value="0" readonly>
-					</div>
-					<div class="col-xl-6">
-						<input type="text" class="form-control" name="total" id="total" value="0" readonly>
-					</div>
-				</div>
-				<div class="row mt-3">
-					<div class="col-xl-12">
-						<button type="submit" class="boxed-btn3 btn-confirm">Book now</button>
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
-	</form>
-	<!-- form itself end -->
+	</div>
 
 	<!-- JS here -->
 	<script src="<?= base_url() ?>assets/front/js/vendor/modernizr-3.5.0.min.js"></script>

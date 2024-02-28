@@ -4689,3 +4689,34 @@ h6 {
     margin-right: 10px;
     font-size: 12px
 }
+
+.book-container a,
+.book-container button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    width: auto;
+    height: 50px;
+    z-index: 99;
+    /* Nilai z-index yang tinggi */
+    /* Ubah height menjadi auto */
+    /* border-radius: 5px; */
+    /* Ubah border-radius sesuai keinginan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+}
+
+.book-container a:hover,
+.book-container button:hover {
+    /* background-color: #0056b3; */
+    padding: 10px;
+    background: #fff;
+    color: #009DFF !important;
+    border: 1px solid #009DFF
+}

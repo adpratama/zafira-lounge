@@ -26,6 +26,8 @@ class Booking extends CI_Controller
         $date_obj = date_create_from_format('m/d/Y', $date_str); // Buat objek tanggal dari format yang diberikan
         $formatted_date = date_format($date_obj, 'Y-m-d');
         $price = preg_replace('/\./', '', $this->input->post('price'));
+        $subtotal = preg_replace('/\./', '', $this->input->post('subtotal'));
+        $tax = preg_replace('/\./', '', $this->input->post('tax'));
         $total = preg_replace('/\./', '', $this->input->post('total'));
         $phone_number = preg_replace('/\+/', '', $this->input->post('phone_number'));
 
@@ -44,6 +46,8 @@ class Booking extends CI_Controller
             'booking_date' => $formatted_date,
             'price' => $price,
             'pax' => trim($this->input->post('pax')),
+            'subtotal' => $subtotal,
+            'tax' => $tax,
             'total' => $total,
             'customer_name' => trim($this->input->post('customer_name')),
             'email' => trim($this->input->post('email')),
@@ -55,11 +59,9 @@ class Booking extends CI_Controller
 
         if ($this->M_Reservation->add_reservation($data)) {
 
-            $wa_pemesan = $phone_number;
-
             $msg2 = 'Halo, kak *' . $this->input->post('customer_name') . '*.%0aTerima kasih sudah menghubungi kami. %0aNomor reservasi *' . $no_reservasi . '*%0aReservasi anda akan segera kami proses. Mohon ditunggu ya.';
 
-            $this->api_whatsapp->wa_notif($msg2, $wa_pemesan);
+            $this->api_whatsapp->wa_notif($msg2, $phone_number);
             $this->session->set_flashdata('message_name', 'The reservation has been successfully created. Please wait for the confirmation.');
 
             redirect("home");

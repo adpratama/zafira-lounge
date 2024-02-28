@@ -29,16 +29,28 @@ function calculateTotal() {
 			)
 	);
 
-	var totalPrice = pax * pricePerPax;
+	var subtotal = pax * pricePerPax;
+	var tax = subtotal * 0.11;
+	var totalPrice = subtotal + tax;
 
 	if (isNaN(pricePerPax)) {
 		pricePerPax = 0;
+	}
+
+	if (isNaN(subtotal)) {
+		subtotal = 0;
+	}
+
+	if (isNaN(tax)) {
+		tax = 0;
 	}
 
 	if (isNaN(totalPrice)) {
 		totalPrice = 0;
 	}
 	document.getElementById("price").value = pricePerPax.toLocaleString("id-ID");
+	document.getElementById("subtotal").value = subtotal.toLocaleString("id-ID");
+	document.getElementById("tax").value = tax.toLocaleString("id-ID");
 	document.getElementById("total").value = totalPrice.toLocaleString("id-ID");
 }
 
