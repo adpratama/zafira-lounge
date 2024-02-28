@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+error_reporting(E_ALL & ~E_DEPRECATED);
 
 class Invoice extends CI_Controller
 {
