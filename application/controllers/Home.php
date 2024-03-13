@@ -18,4 +18,13 @@ class Home extends CI_Controller
 		];
 		$this->load->view('index', $data);
 	}
+
+	public function about()
+	{
+		$data = [
+			'lounges' => $this->M_Lounge->list(),
+			'pages' => 'pages/v_about',
+		];
+		$this->load->view('index', $data);
+	}
 }

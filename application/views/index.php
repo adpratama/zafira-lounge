@@ -64,20 +64,20 @@
 							<div class="main-menu  d-none d-lg-block">
 								<nav>
 									<ul id="navigation">
-										<li><a class="active" href="index.html">home</a></li>
-										<li><a href="rooms.html">rooms</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="#">blog <i class="ti-angle-down"></i></a>
+										<li><a class="active" href="<?= base_url() ?>">home</a></li>
+										<!-- <li><a href="rooms.html">rooms</a></li> -->
+										<li><a href="<?= base_url('home/about') ?>">About</a></li>
+										<!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
 											<ul class="submenu">
 												<li><a href="blog.html">blog</a></li>
 												<li><a href="single-blog.html">single-blog</a></li>
 											</ul>
-										</li>
-										<li><a href="#">pages <i class="ti-angle-down"></i></a>
+										</li> -->
+										<!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
 											<ul class="submenu">
 												<li><a href="elements.html">elements</a></li>
 											</ul>
-										</li>
+										</li> -->
 										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</nav>
@@ -85,7 +85,7 @@
 						</div>
 						<div class="col-xl-2 col-lg-2">
 							<div class="logo-img">
-								<a href="index.html">
+								<a href="<?= base_url() ?>">
 									<img src="<?= base_url() ?>assets/front/img/logo.jpg" alt="" style="width: 112px">
 								</a>
 							</div>
@@ -136,26 +136,7 @@
 	<footer class="footer">
 		<div class="footer_top">
 			<div class="container">
-				<div class="row">
-					<div class="col-xl-3 col-md-6 col-lg-3">
-						<div class="footer_widget">
-							<h3 class="footer_title">
-								address
-							</h3>
-							<p class="footer_text"> 200, Green road, Mongla, <br>
-								New Yor City USA</p>
-							<a href="#" class="line-button">Get Direction</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-md-6 col-lg-3">
-						<div class="footer_widget">
-							<h3 class="footer_title">
-								Reservation
-							</h3>
-							<p class="footer_text">+10 367 267 2678 <br>
-								reservation@Zafira Garden.com</p>
-						</div>
-					</div>
+				<div class="row justify-content-between">
 					<div class="col-xl-2 col-md-6 col-lg-2">
 						<div class="footer_widget">
 							<h3 class="footer_title">
@@ -163,7 +144,7 @@
 							</h3>
 							<ul>
 								<li><a href="#">Home</a></li>
-								<li><a href="#">Rooms</a></li>
+								<!-- <li><a href="#">Rooms</a></li> -->
 								<li><a href="#">About</a></li>
 								<li><a href="#">News</a></li>
 							</ul>
@@ -172,13 +153,21 @@
 					<div class="col-xl-4 col-md-6 col-lg-4">
 						<div class="footer_widget">
 							<h3 class="footer_title">
-								Newsletter
+								Address
 							</h3>
-							<form action="#" class="newsletter_form">
-								<input type="text" placeholder="Enter your mail">
-								<button type="submit">Sign Up</button>
-							</form>
-							<p class="newsletter_text">Subscribe newsletter to get updates</p>
+							<p class="footer_text"> Adi Soemarmo International Airport</p>
+							<!-- <a href="#" class="line-button">Get Direction</a> -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.564833097434!2d110.74662930977915!3d-7.51319509246823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1372ba370a85%3A0x22d08547623e7ddd!2sAdi%20Soemarmo%20International%20Airport!5e0!3m2!1sen!2sid!4v1710229767621!5m2!1sen!2sid" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 col-lg-4">
+						<div class="footer_widget">
+							<h3 class="footer_title">
+								Reservation
+							</h3>
+							<p class="footer_text">(021) 250 955 56 <br>+62 851 8680 8072 <br>+62 895 5147 9079
+								reservation@zafiralounge.com</p>
+							<p class="footer_text">Zafira Lounge Garden operates daily from 06:00 AM until 22:00 PM. The lounge also remains open during holiday seasons and special occasions; however, its operational hours may vary according to flight schedules.</p>
 						</div>
 					</div>
 				</div>

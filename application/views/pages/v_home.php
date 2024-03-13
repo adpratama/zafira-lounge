@@ -1,49 +1,25 @@
 <!-- slider_area_start -->
 <div class="slider_area">
     <div class="slider_active owl-carousel">
-        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+        <!-- <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
                             <h3>Zafira Garden</h3>
-                            <p>Unlock to enjoy the view of Martine</p>
+                            <p>Lounge Eksekutif untuk Haji dan Umroh</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>Life is Beautiful</h3>
-                            <p>Unlock to enjoy the view of Martine</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
                             <h3>Zafira Garden</h3>
-                            <p>Unlock to enjoy the view of Martine</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>Life is Beautiful</h3>
-                            <p>Unlock to enjoy the view of Martine</p>
+                            <p>Pilihan utama bagi yang ingin perjalanan santai dan nyaman</p>
                         </div>
                     </div>
                 </div>
@@ -60,56 +36,22 @@
             <div class="col-xl-5 col-lg-5">
                 <div class="about_info">
                     <div class="section_title mb-20px">
-                        <span>About Us</span>
-                        <h3>A Luxuries Lounge <br>
-                            with Nature</h3>
+                        <span>About us</span>
+                        <h3>Zafira Garden <br>
+                            Lounge</h3>
                     </div>
-                    <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
-                        dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                        sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
-                    <a href="#" class="line-button">Learn More</a>
+                    <p>An exclusive oasis within the airport, offering comfort and luxury for travelers awaiting their flights. With its strategic location within the airport terminal, Zafira Lounge Garden is the top choice for those seeking a relaxed and comfortable travel experience.</p>
+                    <a href="#" class="line-button">Learn more...</a>
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7">
                 <div class="about_thumb d-flex">
-                    <div class="img_1">
-                        <img src="<?= base_url() ?>assets/front/img/about/about_1.png" alt="">
+                    <div class="img_1 w-100">
+                        <img src="<?= base_url() ?>assets/front/img/about/about-1.jpeg" alt="">
                     </div>
-                    <div class="img_2">
-                        <img src="<?= base_url() ?>assets/front/img/about/about_2.png" alt="">
+                    <div class="img_2 w-100">
+                        <img src="<?= base_url() ?>assets/front/img/about/about-2.jpeg" alt="">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- about_area_end -->
-
-<!-- about_area_start -->
-<div class="about_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-7 col-lg-7">
-                <div class="about_thumb2 d-flex">
-                    <div class="img_1">
-                        <img src="<?= base_url() ?>assets/front/img/about/1.png" alt="">
-                    </div>
-                    <div class="img_2">
-                        <img src="<?= base_url() ?>assets/front/img/about/2.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-5 col-lg-5">
-                <div class="about_info">
-                    <div class="section_title mb-20px">
-                        <span>Delicious Food</span>
-                        <h3>We Serve Fresh and <br>
-                            Delicious Food</h3>
-                    </div>
-                    <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
-                        dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                        sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
-                    <a href="#" class="line-button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -142,7 +84,10 @@
                             <span>From Rp<?= $price ?>k/day</span>
                             <h3><?= $l->lounge_name ?></h3>
                         </div>
-                        <a href="#test-form" class="line-button popup-with-form">book now</a>
+                        <!-- <a href="#test-form" class="line-button popup-with-form">book now</a> -->
+                        <button type="button" class="line-button genric-btn info" data-toggle="modal" data-target="#exampleModal">
+                            Book A Room
+                        </button>
                     </div>
                 </div>
             </div>

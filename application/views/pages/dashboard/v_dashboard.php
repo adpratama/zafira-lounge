@@ -40,7 +40,7 @@
                                 <tr>
                                     <td><?= $no++ ?>.</td>
                                     <td><?= $t->no_reservasi ?></td>
-                                    <td><?= format_indo($t->booking_date) ?></td>
+                                    <td><?= $t->booking_date ?></td>
                                     <td><?= $t->pax ?></td>
                                     <td><?= $t->customer_name ?></td>
                                     <td>
