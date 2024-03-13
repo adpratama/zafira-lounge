@@ -1,35 +1,11 @@
-<!-- slider_area_start -->
-<div class="slider_area">
-    <div class="slider_active owl-carousel">
-        <!-- <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>Zafira Garden</h3>
-                            <p>Lounge Eksekutif untuk Haji dan Umroh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>Zafira Garden</h3>
-                            <p>Pilihan utama bagi yang ingin perjalanan santai dan nyaman</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg">
+    <h3>About Montana</h3>
 </div>
-<!-- slider_area_end -->
+<!-- bradcam_area_end -->
 
 <!-- about_area_start -->
+
 <div class="about_area">
     <div class="container">
         <div class="row">
@@ -41,7 +17,7 @@
                             Lounge</h3>
                     </div>
                     <p>An exclusive oasis within the airport, offering comfort and luxury for travelers awaiting their flights. With its strategic location within the airport terminal, Zafira Lounge Garden is the top choice for those seeking a relaxed and comfortable travel experience.</p>
-                    <a href="<?= base_url('home/about') ?>" class="line-button">Learn more...</a>
+                    <!-- <a href="#" class="line-button">Learn more...</a> -->
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7">
@@ -59,7 +35,18 @@
 </div>
 <!-- about_area_end -->
 
-<!-- features_room_startt -->
+<!-- about_info_area_start -->
+<div class="about_info_area">
+    <div class="about_active owl-carousel">
+        <div class="single_slider slider_bg_1"></div>
+        <div class="single_slider slider_bg_1"></div>
+        <!-- <div class="single_slider about_bg_1"></div>
+        <div class="single_slider about_bg_1"></div> -->
+    </div>
+</div>
+<!-- about_info_area_start -->
+
+<!-- about_main_info_start -->
 <div class="features_room">
     <div class="container">
         <div class="row">
@@ -96,9 +83,10 @@
         ?>
     </div>
 </div>
-<!-- features_room_end -->
+<!-- about_main_info_end -->
 
 <!-- forQuery_start -->
+
 <div class="forQuery">
     <div class="container">
         <div class="row">

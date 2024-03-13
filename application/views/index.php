@@ -64,9 +64,9 @@
 							<div class="main-menu  d-none d-lg-block">
 								<nav>
 									<ul id="navigation">
-										<li><a class="active" href="<?= base_url() ?>">home</a></li>
+										<li><a class="<?= ($this->uri->segment(1) == '') ? 'active' : '' ?>" href="<?= base_url() ?>">home</a></li>
 										<!-- <li><a href="rooms.html">rooms</a></li> -->
-										<li><a href="<?= base_url('home/about') ?>">About</a></li>
+										<li><a href="<?= base_url('home/about') ?>" class="<?= ($this->uri->segment(2) == 'about') ? 'active' : '' ?>">About</a></li>
 										<!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
 											<ul class="submenu">
 												<li><a href="blog.html">blog</a></li>
@@ -236,37 +236,37 @@
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="customer_name">Name</label>
-									<input name="customer_name" class="form-control" data-label="Name" placeholder="Enter your name">
+									<input name="customer_name" class="form-control" data-label="Name" placeholder="Enter your name" required>
 								</div>
 							</div>
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="email">Email address</label>
-									<input name="email" class="form-control" data-label="Email" placeholder="Enter your email">
+									<input name="email" class="form-control" data-label="Email" placeholder="Enter your email" required>
 								</div>
 							</div>
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="phone_number">Whatsapp number</label>
-									<input name="phone_number" class="form-control" data-label="book number" placeholder="Enter book number. ex: 62811">
+									<input name="phone_number" class="form-control" data-label="book number" placeholder="Enter book number. ex: 62811" required>
 								</div>
 							</div>
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="booking_date">Booking date</label>
-									<input name="booking_date" id="datepicker" data-label="Booking date" placeholder="Booking date">
+									<input name="booking_date" id="datepicker" data-label="Booking date" placeholder="Booking date" required>
 								</div>
 							</div>
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="pax">Pax</label>
-									<input name="pax" id="pax" class="form-control" data-label="Pax" placeholder="Enter pax" oninput="calculateTotal()" value="<?= $this->input->post('pax') ?>">
+									<input name="pax" id="pax" class="form-control" data-label="Pax" placeholder="Enter pax" oninput="calculateTotal()" value="<?= $this->input->post('pax') ?>" required>
 								</div>
 							</div>
 							<div class="col-12 col-md-6">
 								<div class="form-group">
 									<label for="Lounge">Room type</label>
-									<select name="lounge" class="form-control" id="lounge" data-label="Room type">
+									<select name="lounge" class="form-control" id="lounge" data-label="Room type" required>
 										<!-- <option data-display="Room type">Room type</option> -->
 										<?php
 										foreach ($lounges as $l) :
