@@ -13,6 +13,7 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data = [
+			'title' => "Home",
 			'lounges' => $this->M_Lounge->list(),
 			'pages' => 'pages/v_home',
 		];
