@@ -167,7 +167,7 @@
 							</h3>
 							<p class="footer_text">(021) 250 955 56 <br>+62 851 8680 8072 <br>+62 895 5147 9079
 								reservation@zafiralounge.com</p>
-							<p class="footer_text">Zafira Lounge Garden operates daily from 06:00 AM until 22:00 PM. The lounge also remains open during holiday seasons and special occasions; however, its operational hours may vary according to flight schedules.</p>
+							<p class="footer_text">Zafira Garden Lounge Garden operates daily from 06:00 AM until 22:00 PM. The lounge also remains open during holiday seasons and special occasions; however, its operational hours may vary according to flight schedules.</p>
 						</div>
 					</div>
 				</div>

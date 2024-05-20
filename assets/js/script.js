@@ -3,7 +3,6 @@ if (flashdata) {
 	Swal.fire({
 		title: "Success!! ",
 		text: flashdata,
-		type: "success",
 		icon: "success",
 	});
 }
@@ -13,7 +12,6 @@ if (flashdata_error) {
 	Swal.fire({
 		title: "Error!! ",
 		text: flashdata_error,
-		type: "error",
 		icon: "error",
 	});
 }

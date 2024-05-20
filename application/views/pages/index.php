@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><?= $title ?> - Zafira Lounge</title>
+    <title><?= $title ?> - Zafira Garden Lounge</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="<?= base_url() ?>assets/img/favicon.png" rel="icon">
+    <link href="<?= base_url() ?>assets/front/images/logo/logo-bg-light-crop.png" rel="icon">
     <link href="<?= base_url() ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -29,8 +29,10 @@
     <!-- Template Main CSS File -->
     <link href="<?= base_url() ?>assets/css/style.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+
     <!-- =======================================================
-  * Template Name: Zafira Lounge
+  * Template Name: Zafira Garden Lounge
   * Updated: Mar 09 2023 with Bootstrap v5.2.3
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
@@ -49,8 +51,8 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="<?= base_url() ?>" class="logo d-flex align-items-center">
-                <!-- <img src="<?= base_url() ?>assets/img/logo.png" alt=""> -->
-                <span class="d-none d-lg-block">Zafira Lounge</span>
+                <img src="<?= base_url() ?>assets/front/images/logo/logo-bg-light-crop.png" alt="">
+                <!-- <span class="d-none d-lg-block">Zafira Garden Lounge</span> -->
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -109,7 +111,7 @@
 
             <li class="nav-item">
                 <a class="nav-link  <?php if ($this->uri->segment(2) != 'booking') echo 'collapsed' ?>" href="<?= base_url('dash/booking') ?>">
-                    <i class="bi bi-grid"></i>
+                    <i class="bi bi-journal-text"></i>
                     <span>Reservation</span>
                 </a>
             </li>
@@ -117,17 +119,44 @@
             <li class="nav-heading">Invoice kegiatan</li>
             <li class="nav-item">
                 <a class="nav-link  <?php if ($this->uri->segment(2) != 'invoice') echo 'collapsed' ?>" href="<?= base_url('dash/invoice') ?>">
-                    <i class="bi bi-grid"></i>
+                    <i class="bi bi-file-earmark-check"></i>
                     <span>Invoice</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  <?php if ($this->uri->segment(2) != 'customer') echo 'collapsed' ?>" href="<?= base_url('dash/customer') ?>">
-                    <i class="bi bi-grid"></i>
+                    <i class="bi bi-people"></i>
                     <span>Customer</span>
                 </a>
             </li>
 
+            <li class="nav-heading">Artikel</li>
+            <li class="nav-item">
+                <a class="nav-link  <?= (($this->uri->segment(2) == 'article') && !$this->uri->segment(3)) ? '' : 'collapsed' ?>" href="<?= base_url('dash/article') ?>">
+                    <i class="bi bi-book"></i>
+                    <span>Article</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= ($this->uri->segment(2) != 'category') ? 'collapsed' : '' ?>" href="<?= base_url('dash/category') ?>">
+                    <i class="bi bi-list-ul"></i>
+                    <span>Category</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= ($this->uri->segment(3) != 'tag') ? 'collapsed' : '' ?>" href="<?= base_url('dash/article/tag') ?>">
+                    <i class="bi bi-tag"></i>
+                    <span>Tag</span>
+                </a>
+            </li>
+
+            <li class="nav-heading">Misc.</li>
+            <li class="nav-item">
+                <a class="nav-link <?= ($this->uri->segment(2) != 'user') ? 'collapsed' : '' ?>" href="<?= base_url('dash/user') ?>">
+                    <i class="bi bi-person-badge"></i>
+                    <span>User</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed btn-logout" href="<?= base_url('auth/logout') ?>">
                     <i class="bi bi-box-arrow-right"></i>
@@ -152,7 +181,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>Zafira Lounge</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Zafira Garden Lounge</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
@@ -171,7 +200,6 @@
     <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendor/chart.js/chart.umd.js"></script>
     <script src="<?= base_url('assets/'); ?>vendor/echarts/echarts.min.js"></script>
-    <script src="<?= base_url('assets/'); ?>vendor/quill/quill.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendor/simple-datatables/simple-datatables.js"></script>
     <script src="<?= base_url('assets/'); ?>vendor/tinymce/tinymce.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendor/php-email-form/validate.js"></script>
@@ -183,8 +211,6 @@
     <!-- Scripts -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
     <script src="<?= base_url('assets/'); ?>js/sweetalert2/sweetalert2.all.min.js"></script>
 
     <script src="<?= base_url('assets/'); ?>js/script.js"></script>

@@ -13,7 +13,7 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'title' => "Home",
+			'title' => 'Beranda',
 			'lounges' => $this->M_Lounge->list(),
 			'pages' => 'pages/v_home',
 		];
@@ -23,8 +23,29 @@ class Home extends CI_Controller
 	public function about()
 	{
 		$data = [
+			'title' => 'Tentang',
 			'lounges' => $this->M_Lounge->list(),
 			'pages' => 'pages/v_about',
+		];
+		$this->load->view('index', $data);
+	}
+
+	public function contact()
+	{
+		$data = [
+			'title' => 'Kontak',
+			'lounges' => $this->M_Lounge->list(),
+			'pages' => 'pages/v_contact',
+		];
+		$this->load->view('index', $data);
+	}
+
+	public function book()
+	{
+		$data = [
+			'title' => 'Book',
+			'lounges' => $this->M_Lounge->list(),
+			'pages' => 'pages/v_book',
 		];
 		$this->load->view('index', $data);
 	}

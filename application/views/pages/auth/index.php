@@ -9,10 +9,10 @@
     <meta content="" name="keywords">
 
     <!-- title -->
-    <title><?= $title ?> - Dashboard</title>
+    <title><?= $title ?> - Zafira Garden Lounge</title>
 
     <!-- Favicons -->
-    <link href="<?= base_url() ?>assets/img/favicon.png" rel="icon">
+    <link href="<?= base_url() ?>assets/front/images/logo/logo-bg-light-crop.png" rel="icon">
     <link href="<?= base_url() ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -64,8 +64,8 @@
 
                             <div class="d-flex justify-content-center mb-3">
                                 <a href="<?= base_url(); ?>" class="logo d-flex align-items-center w-auto">
-                                    <img src="<?= base_url() ?>assets/img/logo.png" alt="">
-                                    <span class="d-none d-lg-block">NiceAdmin</span>
+                                    <img src="<?= base_url() ?>assets/front/images/logo/logo-bg-light-crop.png" alt="">
+                                    <!-- <span class="d-none d-lg-block">Zafira</span> -->
                                 </a>
                             </div>
                             <!-- End Logo -->
