@@ -21,7 +21,7 @@
                 <div class="content">
                     <div class="heading-section">
                         <div class="sub wow fadeInUp">Tentang Zafira Garden Lounge</div>
-                        <div class="main wow fadeInUp">Zafira Garden Lounge Garden</div>
+                        <div class="main wow fadeInUp">Zafira Garden Lounge</div>
                         <div class="divider wow fadeInUp">
                             <div></div>
                         </div>
@@ -34,12 +34,12 @@
             </div>
             <div class="col-lg-5">
                 <div class="image wow fadeInRight">
-                    <img class="w-full" src="<?= base_url() ?>assets/front/images/logo/logo-bg-gelap.png" alt="">
+                    <img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-    <div class="swiper-container" data-swiper='{
+    <div class="swiper-container mt-3" data-swiper='{
                     "spaceBetween": 30,
                     "slidesPerView": 1,
                     "loop": true,
@@ -56,13 +56,13 @@
                 }'>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="https://picsum.photos/id/301/832/476" alt="" />
+                <img src="<?= base_url('assets/front/images/item-background/2.1-1080p.png') ?>" alt="" />
             </div>
             <div class="swiper-slide">
-                <img src="https://picsum.photos/id/302/832/476" alt="" />
+                <img src="<?= base_url('assets/front/images/item-background/2.2-1080p.png') ?>" alt="" />
             </div>
             <div class="swiper-slide">
-                <img src="https://picsum.photos/id/304/832/476" alt="" />
+                <img src="<?= base_url('assets/front/images/item-background/2.3-1080p.png') ?>" alt="" />
             </div>
         </div>
         <div class="swiper-button-next button-style-arrow about-next"></div>
@@ -127,7 +127,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="images">
-                    <img class="img1 wow fadeInLeft" src="<?= base_url() ?>assets/front/images/logo/logo-bg-gelap.png" alt="">
+                    <img class="img1 wow fadeInLeft" src="<?= base_url() ?>assets/front/images/item-background/1-5.png" alt="">
                     <!-- <img class="img2 wow fadeInLeft" data-wow-delay="0.2s" src="<?= base_url() ?>assets/front/images/logo/logo-bg-gelap.png" alt=""> -->
                 </div>
             </div>
@@ -295,9 +295,9 @@
 <!-- /wg-testimonial -->
 
 <!-- wg-action -->
-<div class="wg-video-full style-1 h649">
+<div class="wg-video-full">
     <div class="video-wrap">
-        <a href="https://www.youtube.com/watch?v=4U93WSg8C74" class="popup-youtube">
+        <a href="https://www.youtube.com/watch?v=GX6fWiN_gTA" class="popup-youtube">
             <div class="icon">
                 <i class="icon-play3"></i>
             </div>

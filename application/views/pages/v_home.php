@@ -188,7 +188,7 @@
 </div>
 <div class="wg-video-full">
 	<div class="video-wrap">
-		<a href="https://www.youtube.com/watch?v=eI_LjETc_Ak" class="popup-youtube">
+		<a href="https://www.youtube.com/watch?v=GX6fWiN_gTA" class="popup-youtube">
 			<!-- <a href="<?= base_url('assets/front/videos/video-bumper.mp4') ?>" class="popup-youtube"> -->
 			<!-- <img src="<?= base_url('assets/front/images/thumbnail/video-bumper.png') ?>" alt="Video Thumbnail" class="video-thumbnail"> -->
 			<div class="icon">
