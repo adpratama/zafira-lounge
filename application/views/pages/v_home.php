@@ -360,7 +360,7 @@
 			</div>
 			<div class="col-xl-3 col-md-6">
 				<div class="gallery-item">
-					<img src="<?= base_url() ?>assets/front/images/item-background/2-3.png" alt="">
+					<img src="<?= base_url() ?>assets/front/images/item-background/2-3.jpg" alt="">
 				</div>
 			</div>
 			<div class="col-xl-3 col-md-6">
