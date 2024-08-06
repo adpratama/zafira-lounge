@@ -57,6 +57,9 @@
                                         <a href="<?= base_url('dash/booking/print/' . $t->no_reservasi) ?>" class="btn btn-primary btn-sm" target="_blank">
                                             <i class="bi bi-file-pdf"></i> Print
                                         </a>
+                                        <a href="<?= base_url('dash/booking/reservasi_pdf/' . $t->no_reservasi) ?>" class="btn btn-warning btn-sm" target="_blank">
+                                            <i class="bi bi-file-pdf"></i> Test Print
+                                        </a>
                                         <div class="modal fade" id="verticalycentered<?= $t->no_reservasi ?>" tabindex="-1">
                                             <div class="modal-dialog modal-dialog-centered">
                                                 <div class="modal-content">
@@ -67,6 +70,7 @@
                                                     <form action="<?= base_url('dash/booking/process/' . $t->no_reservasi) ?>" method="post">
                                                         <div class="modal-body">
                                                             <div class="row g-3">
+                                                                <h4>Basic Information</h4>
                                                                 <div class="col-6">
                                                                     <label for="customer_name" class="form-label">Customer name</label>
                                                                     <input type="text" class="form-control" value="<?= $t->customer_name ?>" name="customer_name" readonly>
@@ -90,6 +94,39 @@
                                                                 <div class="col-6">
                                                                     <label for="pax" class="form-label">Pax</label>
                                                                     <input type="text" name="pax" id="pax" class="form-control" value="<?= $t->pax ?>" readonly>
+                                                                </div>
+                                                                <hr>
+                                                                <h4>Proceedings</h4>
+                                                                <div class="col-6">
+                                                                    <label for="arival_date" class="form-label">Date of Arival</label>
+                                                                    <input type="date" class="form-control" name="arival_date" value="<?= $t->arival_date ?>" readonly>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="depature_date" class="form-label">Date of Depature</label>
+                                                                    <input type="date" class="form-control" name="depature_date" value="<?= $t->depature_date ?>" readonly>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="guest_number" class="form-label">Number of Guest</label>
+                                                                    <input type="text" class="form-control" value="<?= $t->pax ?>" name="guest_number" readonly>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="overall_amount" class="form-label">Overall Amount</label>
+                                                                    <input type="text" class="form-control" value="<?= $t->total ?>" name="overall_amount" readonly>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="type_event" class="form-label">Type of Event</label>
+                                                                    <input type="text" class="form-control" name="type_event" value="<?= $t->type_event ?>" readonly>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="type_packages" class="form-label">Type of Packages</label>
+                                                                    <select name="type_packages" class="form-control">
+                                                                        <option value="">Select Option Your Packages</option>
+                                                                        <option value='1' <?php if ($t->type_packages == '1') echo "selected"; ?>>Full Package</option>
+                                                                        <option value='2' <?php if ($t->type_packages == '2') echo "selected"; ?>>Prime Packagee</option>
+                                                                        <option value='3' <?php if ($t->type_packages == '3') echo "selected"; ?>>Special Package</option>
+                                                                        <option value='4' <?php if ($t->type_packages == '4') echo "selected"; ?>>Regular Package</option>
+                                                                        <option value='5' <?php if ($t->type_packages == '5') echo "selected"; ?>>Other Package</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -34,6 +34,19 @@ class Booking extends CI_Controller
     public function process()
     {
         $id = $this->uri->segment(4);
+        // var_dump($id);
+
+        // // untuk input data yang harus di lengkapi
+        // $data = [
+        //     'depature_date' => $this->input->post('depature_date'),
+        //     'arival_date' => $this->input->post('arival_date'),
+        //     'type_event' => $this->input->post('type_event'),
+        //     'type_packages' => $this->input->post('type_packages')
+        // ];
+
+        // var_dump($data);
+        // exit;
+
         $this->processApproval($id, 1, 'Reservasi telah disetujui dan akan diproses', 'Terjadi kesalahan. Silahkan dicoba lagi');
     }
 
@@ -49,11 +62,21 @@ class Booking extends CI_Controller
 
         $wa_pemesan = $detail['phone_number'];
 
-        $data = ['reservation_status' => $status];
+        // var_dump($id);
 
+        // untuk input data yang harus di lengkapi
+        $data = [
+            'depature_date' => $this->input->post('depature_date'),
+            'arival_date' => $this->input->post('arival_date'),
+            'type_event' => $this->input->post('type_event'),
+            'type_packages' => $this->input->post('type_packages'),
+            'reservation_status' => $status
+        ];
+
+        // var_dump($data);
+        // exit;
         $data_invoice = [];
         $this->M_Reservation->create_inv($data_invoice);
-
         $this->M_Reservation->approve($id, $data);
 
         if ($status == 1) {
@@ -88,6 +111,31 @@ class Booking extends CI_Controller
         $orientation = "portrait";
 
         $html = $this->load->view('pages/dashboard/reservation/v_invoice_pdf', $data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+    }
+
+    public function reservasi_pdf($no_inv)
+    {
+        $data = [
+            'title' => 'Invoice No. ' . $no_inv,
+            'invoice' => $this->M_Reservation->detail($no_inv),
+        ];
+
+        // var_dump($no_inv, $data);
+        // exit;
+
+        // filename dari pdf ketika didownload
+        $file_pdf = 'Invoice Reservasi No. ' . $no_inv;
+
+        // setting paper
+        $paper = 'A4';
+
+        //orientasi paper potrait / landscape
+        $orientation = "portrait";
+
+        $html = $this->load->view('pages/dashboard/reservation/v_reservation_inv', $data, true);
 
         // run dompdf
         $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);

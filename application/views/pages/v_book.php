@@ -25,6 +25,11 @@
                 </fieldset>
             </div>
             <div class="columns">
+                <fieldset class="address">
+                    <input type="text" placeholder="Address*" class="" name="address" tabindex="2" value="" aria-required="true" required="true">
+                </fieldset>
+            </div>
+            <div class="columns">
                 <fieldset class="email">
                     <input type="text" placeholder="Email*" class="" name="customer_email" tabindex="2" value="" aria-required="true" required="true">
                 </fieldset>

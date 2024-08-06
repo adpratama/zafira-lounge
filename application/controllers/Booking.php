@@ -49,6 +49,7 @@ class Booking extends CI_Controller
             'total' => $total,
             'customer_name' => trim($this->input->post('customer_name')),
             'email' => trim($this->input->post('customer_email')),
+            'address' => trim($this->input->post('address')),
             'phone_number' => trim($phone_number),
             'created_at' => date('Y-m-d H:i:s'),
             'no_urut' => $no_urut,
