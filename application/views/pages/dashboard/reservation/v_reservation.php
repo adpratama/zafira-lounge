@@ -58,7 +58,7 @@
                                             <i class="bi bi-file-pdf"></i> Print
                                         </a>
                                         <a href="<?= base_url('dash/booking/reservasi_pdf/' . $t->no_reservasi) ?>" class="btn btn-warning btn-sm" target="_blank">
-                                            <i class="bi bi-file-pdf"></i> Test Print
+                                            <i class="bi bi-file-pdf"></i> Print Reservasi
                                         </a>
                                         <div class="modal fade" id="verticalycentered<?= $t->no_reservasi ?>" tabindex="-1">
                                             <div class="modal-dialog modal-dialog-centered">

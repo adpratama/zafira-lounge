@@ -60,7 +60,7 @@ class Booking extends CI_Controller
         // print_r($data);
         // echo '</pre>';
         // exit;
-        $phone_number_admin = "085240719210";
+        $phone_number_admin = "08170777146";
 
         if ($this->M_Reservation->add_reservation($data)) {
 
