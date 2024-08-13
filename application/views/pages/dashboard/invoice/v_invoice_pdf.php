@@ -54,7 +54,7 @@
         <tbody>
             <tr>
                 <td style="width: 400px">
-                    <img src="<?= base_url(); ?>assets/front/img/logo.jpg" style="width: 200px;" alt="">
+                    <img src="<?= base_url(); ?>assets/front/images/logo-bg-light.png" style="width: 200px;" alt="">
                 </td>
                 <td style="width: 400px;">
                     <table>
