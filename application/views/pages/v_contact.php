@@ -1,5 +1,5 @@
 <!-- banner-page -->
-<div class="banner-page inner-page contact-page" style="background-image: url('https://picsum.photos/id/1/1920/710')">
+<div class="banner-page inner-page contact-page" style="background-image: url('<?= base_url('assets/front/images/item-background/5-1.jpg') ?>')">
     <div class="content">
         <div class="banner-text">contact us</div>
         <p class="t1">If you have any questions or concerns, you can contact us in the <br> following ways</p>
@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="contact-item wow fadeInUp line-right">
-                        <div class="image"><img src="assets/images/item-background/call.png" alt=""></div>
+                        <div class="image"><img src="<?= base_url() ?>assets/front/images/item-background/call.png" alt=""></div>
                         <div class="title">Contact Us</div>
                         <p>
                             Phone: +2 650-603-0553 <br>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-item wow fadeInUp line-right" data-wow-delay="0.1s">
-                        <div class="image"><img src="assets/images/item-background/address.png" alt=""></div>
+                        <div class="image"><img src="<?= base_url() ?>assets/front/images/item-background/address.png" alt=""></div>
                         <div class="title">Address here</div>
                         <p>
                             Ex Gedung TKI, Terminal Keberangkatan,<br>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="image"><img src="assets/images/item-background/time.png" alt=""></div>
+                        <div class="image"><img src="<?= base_url() ?>assets/front/images/item-background/time.png" alt=""></div>
                         <div class="title">open time</div>
                         <p>
                             Mon - Fri : 9.00am - 22.00pm <br>

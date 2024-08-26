@@ -3,7 +3,7 @@
 	<div class="swiper relative slider-page-title">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<div class="content text-center" style="background-image: url('<?= base_url("assets/front/images/item-background/1-1.png") ?>');">
+				<div class="content text-center" style="background-image: url('<?= base_url("assets/front/images/item-background/1-1.jpg") ?>');">
 					<div class="themesflat-container">
 						<div class="row">
 							<div class="col-12">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="content text-right" style="background-image: url('<?= base_url("assets/front/images/item-background/1-2.png") ?>');">
+				<div class="content text-right" style="background-image: url('<?= base_url("assets/front/images/item-background/1-2.jpg") ?>');">
 					<div class="themesflat-container">
 						<div class="row">
 							<div class="col-12">
@@ -74,7 +74,7 @@
 			</div>
 			<div class="col-lg-5">
 				<div class="image wow fadeInRight">
-					<img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.png" alt="">
+					<img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -350,12 +350,12 @@
 		<div class="row">
 			<div class="col-xl-3 col-md-6">
 				<div class="gallery-item">
-					<img src="<?= base_url() ?>assets/front/images/item-background/2-1.png" alt="">
+					<img src="<?= base_url() ?>assets/front/images/item-background/2-1.jpg" alt="">
 				</div>
 			</div>
 			<div class="col-xl-3 col-md-6">
 				<div class="gallery-item">
-					<img src="<?= base_url() ?>assets/front/images/item-background/2-2.png" alt="">
+					<img src="<?= base_url() ?>assets/front/images/item-background/2-2.jpg" alt="">
 				</div>
 			</div>
 			<div class="col-xl-3 col-md-6">
@@ -365,7 +365,7 @@
 			</div>
 			<div class="col-xl-3 col-md-6">
 				<div class="gallery-item">
-					<img src="<?= base_url() ?>assets/front/images/item-background/2-4.png" alt="">
+					<img src="<?= base_url() ?>assets/front/images/item-background/2-4.jpg" alt="">
 				</div>
 			</div>
 		</div>

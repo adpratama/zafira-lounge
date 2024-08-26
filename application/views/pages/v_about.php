@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="image wow fadeInRight">
-                    <img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.png" alt="">
+                    <img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/3-2.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -56,13 +56,13 @@
                 }'>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="<?= base_url('assets/front/images/item-background/2.1-1080p.png') ?>" alt="" />
+                <img src="<?= base_url('assets/front/images/item-background/2.1-1080p.jpg') ?>" alt="" />
             </div>
             <div class="swiper-slide">
                 <img src="<?= base_url('assets/front/images/item-background/2.2-1080p.png') ?>" alt="" />
             </div>
             <div class="swiper-slide">
-                <img src="<?= base_url('assets/front/images/item-background/2.3-1080p.png') ?>" alt="" />
+                <img src="<?= base_url('assets/front/images/item-background/2.3-1080p.jpg') ?>" alt="" />
             </div>
         </div>
         <div class="swiper-button-next button-style-arrow about-next"></div>
@@ -127,7 +127,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="images">
-                    <img class="img1 wow fadeInLeft" src="<?= base_url() ?>assets/front/images/item-background/1-5.png" alt="">
+                    <img class="img1 wow fadeInLeft" src="<?= base_url() ?>assets/front/images/item-background/1-5.jpg" alt="">
                     <!-- <img class="img2 wow fadeInLeft" data-wow-delay="0.2s" src="<?= base_url() ?>assets/front/images/logo/logo-bg-gelap.png" alt=""> -->
                 </div>
             </div>
