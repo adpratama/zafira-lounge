@@ -84,7 +84,7 @@
 						</div>
 						<nav class="main-nav">
 							<ul class="menu-primary-menu">
-								<li class="menu-item <?= ($this->uri->segment(1) == "home" and $this->uri->segment(1) == "") ? 'current-menu-item' : '' ?>">
+								<li class="menu-item <?= ($this->uri->segment(1) == "" or ($this->uri->segment(1) == "home" and !$this->uri->segment(2))) ? 'current-menu-item' : '' ?>">
 									<a href="<?= base_url() ?>">Beranda</a>
 								</li>
 								<li class="menu-item <?= ($this->uri->segment(2) == 'about') ? 'current-menu-item' : '' ?>">

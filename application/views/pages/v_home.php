@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="content text-left" style="background-image: url('<?= base_url("assets/front/images/item-background/1-3.png") ?>');">
+				<div class="content text-left" style="background-image: url('<?= base_url("assets/front/images/item-background/1-3.jpg") ?>');">
 					<div class="themesflat-container">
 						<div class="row">
 							<div class="col-12">
@@ -76,8 +76,28 @@
 				<div class="image wow fadeInRight">
 					<img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.jpg" alt="">
 				</div>
+
+				<!-- <div class="wg-video-full" style="background-image: url(<?= base_url() ?>assets/front/images/item-background/1-4.jpg);">
+					<div class="video-wrap">
+						<a href="https://www.youtube.com/watch?v=UAMRv_H4seo" class="popup-youtube">
+							<div class="icon">
+								<i class="icon-play3"></i>
+							</div>
+						</a>
+					</div>
+				</div> -->
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="wg-video-full" style="background-image: url(<?= base_url() ?>assets/front/images/bg-section/bg-video-1.jpg);">
+	<div class="video-wrap">
+		<a href="https://www.youtube.com/watch?v=UAMRv_H4seo" class="popup-youtube">
+			<div class="icon">
+				<i class="icon-play3"></i>
+			</div>
+		</a>
 	</div>
 </div>
 <!-- /wg-about-us -->
@@ -189,17 +209,10 @@
 <div class="wg-video-full">
 	<div class="video-wrap">
 		<a href="https://www.youtube.com/watch?v=GX6fWiN_gTA" class="popup-youtube">
-			<!-- <a href="<?= base_url('assets/front/videos/video-bumper.mp4') ?>" class="popup-youtube"> -->
-			<!-- <img src="<?= base_url('assets/front/images/thumbnail/video-bumper.png') ?>" alt="Video Thumbnail" class="video-thumbnail"> -->
 			<div class="icon">
 				<i class="icon-play3"></i>
 			</div>
 		</a>
-		<!-- <video width="400" controls>
-			<source src="<?= base_url('assets/front/videos/video-bumper.mp4') ?>" type="video/mp4">
-			<source src="mov_bbb.ogg" type="video/ogg">
-			Your browser does not support HTML video.
-		</video> -->
 	</div>
 </div>
 

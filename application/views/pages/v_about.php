@@ -1,5 +1,5 @@
 <!-- banner-page -->
-<div class="banner-page inner-page about" style="background-image: url('https://picsum.photos/id/1/1920/710')">
+<div class="banner-page inner-page about" style="background-image: url('<?= base_url('assets/front/images/about/cover.jpg') ?>')">
     <div class="content">
         <div class="banner-text">about us</div>
         <p>
@@ -39,14 +39,14 @@
             </div>
         </div>
     </div>
-    <div class="swiper-container mt-3" data-swiper='{
+    <div class="swiper-container mt-3 " data-swiper='{
                     "spaceBetween": 30,
                     "slidesPerView": 1,
                     "loop": true,
                     "centeredSlides" : true,
                     "breakpoints": {
                         "991": {
-                            "slidesPerView": 2.24
+                            "slidesPerView": 4.24
                         }
                     },
                     "navigation": {
@@ -54,16 +54,14 @@
                         "prevEl": ".about-prev"
                     }
                 }'>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="<?= base_url('assets/front/images/item-background/2.1-1080p.jpg') ?>" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= base_url('assets/front/images/item-background/2.2-1080p.png') ?>" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= base_url('assets/front/images/item-background/2.3-1080p.jpg') ?>" alt="" />
-            </div>
+        <div class="swiper-wrapper align-items-center">
+            <?php for ($i = 1; $i <= 100; $i++) :
+                $ext = ($i == "1" or $i == "2" or $i == "4" or $i == "38" or $i == "69" or $i == "70") ? "png" : "jpg";
+            ?>
+                <div class="swiper-slide">
+                    <img src="<?= base_url("assets/front/images/about/1-$i.$ext") ?>" alt="" class="" />
+                </div>
+            <?php endfor; ?>
         </div>
         <div class="swiper-button-next button-style-arrow about-next"></div>
         <div class="swiper-button-prev button-style-arrow about-prev"></div>
@@ -152,7 +150,7 @@
 <!-- /wg-philosophy -->
 
 <!-- road-map -->
-<div class="road-map">
+<!-- <div class="road-map">
     <div class="swiper-container" data-swiper='{
                     "spaceBetween": 0,
                     "slidesPerView": 1,
@@ -232,7 +230,7 @@
     </div>
     <div class="swiper-button-next button-style-arrow about-next"></div>
     <div class="swiper-button-prev button-style-arrow about-prev"></div>
-</div>
+</div> -->
 <!-- /road-map -->
 
 <!-- wg-testimonial -->
