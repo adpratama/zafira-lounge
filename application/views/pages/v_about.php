@@ -55,11 +55,9 @@
                     }
                 }'>
         <div class="swiper-wrapper align-items-center">
-            <?php for ($i = 1; $i <= 100; $i++) :
-                $ext = ($i == "1" or $i == "2" or $i == "4" or $i == "38" or $i == "69" or $i == "70") ? "png" : "jpg";
-            ?>
+            <?php for ($i = 1; $i <= 65; $i++) : ?>
                 <div class="swiper-slide">
-                    <img src="<?= base_url("assets/front/images/about/1-$i.$ext") ?>" alt="" class="" />
+                    <img src="<?= base_url("assets/front/images/about/$i.jpg") ?>" alt="" class="" />
                 </div>
             <?php endfor; ?>
         </div>
