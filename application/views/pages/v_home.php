@@ -8,9 +8,8 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="text">Zafira Garden Lounge</div>
-								<div class="heading">Connecting destinations, uniting hearts</div>
-								<p>Enjoy quality moments with family at Zafira Garden Lounge. <br>A spacious, comfortable space ready to make your journey extra special.</p>
-								<!-- <a class="button-two-line" href="menu-1.html">DISCOVERY MENU</a> -->
+								<div class="heading">Make Every Moment of Your Journey Counts</div>
+								<p>Enjoy Comfort at Zafira Garden Lounge, Start your journey with ease at Zafira Garden Lounge. <br> We’re here to make your traveling experience enjoyable and relaxing.</p>
 							</div>
 						</div>
 					</div>
@@ -22,10 +21,9 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="text">Gateway to Wonder</div>
-								<div class="heading">Every Flights has it own Story</div>
-								<p>Temukan oasis ketenangan di Zafira Garden Lounge. Bersantailah dengan nyaman sebelum memulai perjalanan panjang.
+								<div class="heading">Oase Nyaman di Tengah Keramaian</div>
+								<p>Zafira Garden Lounge Menghadirkan kemudahan dan kenyamanan <br> yang membuat setiap momen perjalanan anda menjadi lebih berharga.
 								</p>
-								<!-- <a class="button-two-line" href="menu-1.html">DISCOVERY MENU</a> -->
 							</div>
 						</div>
 					</div>
@@ -37,10 +35,8 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="text">Your Pre-Flight Oasis</div>
-								<div class="heading">Heaven of Comfort</div>
-								<p>Mulailah perjalanan dengan kebersamaan di Zafira Garden Lounge. Tempat yang nyaman untuk bersantai dengan keluarga sebelum keberangkatan.
-								</p>
-								<!-- <a class="button-two-line" href="menu-1.html">DISCOVERY MENU</a> -->
+								<div class="heading">Jangan Terburu, Temukan Ketentraman di Ruang Tunggu</div>
+								<p>Zafira Garden Lounge hadir di tengah kesibukan bandara, <br>Zafira Garden Lounge adalah tempat ideal untuk beristirahat. <br> Fasilitas nyaman dan layanan ramah membuat awal perjalanan Anda lebih menyenangkan. </p>
 							</div>
 						</div>
 					</div>
@@ -68,7 +64,7 @@
 							Mulailah perjalanan dengan kebersamaan di Zafira Garden Lounge. Tempat yang nyaman untuk bersantai dengan keluarga sebelum keberangkatan.
 						</div>
 					</div>
-					<p class="wow fadeInUp">Zafira Garden Lounge hadir untuk memberikan pengalaman menunggu yang nyaman bagi para penumpang bandara. Kami menawarkan ruang yang tenang untuk bersantai sebelum penerbangan, dilengkapi dengan hidangan lezat dan akses cepat ke terminal.</p>
+					<p class="wow fadeInUp">Nikmati kenyamanan serbaguna Lounge kami. fasilitas untuk kegiatan Umroh, Haji, Gathering dan acara corporate. Dengan layanan yang ramah dan pilihan hidangan khas Indonesia, lounge kami adalah pilihan ideal untuk memulai perjalanan komersial maupun Umroh dan Haji. Rasakan pengalaman nyaman dan praktis di Zafira Garden Lounge untuk perjalanan penerbangan Anda.</p>
 					<a class="button-two-line wow fadeInUp" href="<?= base_url('home/about') ?>">LEBIH LANJUT</a>
 				</div>
 			</div>
@@ -76,16 +72,6 @@
 				<div class="image wow fadeInRight">
 					<img class="w-full" src="<?= base_url() ?>assets/front/images/item-background/1-4.jpg" alt="">
 				</div>
-
-				<!-- <div class="wg-video-full" style="background-image: url(<?= base_url() ?>assets/front/images/item-background/1-4.jpg);">
-					<div class="video-wrap">
-						<a href="https://www.youtube.com/watch?v=UAMRv_H4seo" class="popup-youtube">
-							<div class="icon">
-								<i class="icon-play3"></i>
-							</div>
-						</a>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -107,7 +93,6 @@
 			<div class="col-md-7">
 				<div class="images">
 					<img class="img1 wow fadeInLeft" src="<?= base_url() ?>assets/front/images/item-background/1-5.png" alt="">
-					<!-- <img class="img2 wow fadeInLeft" data-wow-delay="0.2s" src="<?= base_url() ?>assets/front/images/logo/logo-bg-gelap.png" alt=""> -->
 				</div>
 			</div>
 			<div class="col-md-5">
@@ -119,10 +104,18 @@
 							<div></div>
 						</div>
 					</div>
-					<p class="wow fadeInUp">Zafira Garden Lounge didirikan dengan filosofi untuk menciptakanoasis ketenangan di tengah kesibukan bandara. Dengan ruang tunggu yang nyaman, elegan, dan penuh dengan nuansa kehangatan.</p>
-					<p class="wow fadeInUp">Tujuan kami mendirikan Zafira Garden Lounge adalah untuk menyediakan tempat di mana penumpang dapat melepas penat, menikmati hidangan lezat, dan bersantai dengan keluarga sebelum keberangkatan. </p>
-					<p class="wow fadeInUp">Dengan mengedepankan pelayanan ramah dan fasilitas berkualitas, tujuan kami adalah untuk memastikan bahwa setiap momen yang dihabiskan di Zafira Garden Lounge meninggalkan kesan yang positif dan memperkaya perjalanan para penumpang. </p>
-					<!-- <a class="button-two-line wow fadeInUp" href="chef.html">VIEW ALL THE CHEF</a> -->
+					<p class="wow fadeInUp">Zafira Garden Lounge didirikan dengan visi menghadirkan oasis ketenangan di tengah
+						dinamika Bandara Adi Soemarmo. Mengusung suasana nyaman, kami menyediakan ruang
+						bagi tamu baik jamaah umroh, haji, dan para traveler yang ingin merasakan kenyamanan
+						sebelum keberangkatan atau kepulangan.</p>
+					<p class="wow fadeInUp">Tujuan kami adalah menjadikan waktu tunggu lebih berkualitas. Lounge kami menjadi tempat
+						ideal untuk berkumpul dengan keluarga dan kerabat sebelum penerbangan, sambil menikmati
+						pilihan hidangan. Selain itu, fasilitas kami juga dapat di pergunakan untuk manasik haji untuk
+						mempersiapkan ibadah, serta ruang serbaguna yang luas untuk workshop, seminar, atau
+						gathering.</p>
+					<p class="wow fadeInUp">Dengan pelayanan ramah dan fasilitas berkualitas, kami berkomitmen memberikan service dan
+						pengalaman yang menyenangkan, menjadikan setiap momen di Zafira Garden Lounge
+						berkesan.</p>
 				</div>
 			</div>
 		</div>
@@ -178,29 +171,37 @@
 			<div class="col-md-3">
 				<div class="box-icon wow fadeInUp">
 					<div class="icon"><img src="<?= base_url() ?>assets/front/images/item-background/waiting-room.png" alt=""></div>
-					<div class="title"><a href="#">Ruang Tunggu Eksklusif</a></div>
-					<p>Zafira Garden Lounge menawarkan area yang tenang dan elegan, memberikan pengunjung pengalaman bersantai yang premium sebelum perjalanan mereka</p>
+					<div class="title"><a href="#">Ruang Tunggu Nyaman dan Tenang</a></div>
+					<p>Zafira Garden Lounge menyediakan area nyaman dan tenang, ideal untuk bersantai sebelum
+						perjalanan. Nikmati suasana elegan yang dirancang untuk menghadirkan pengalaman relaksasi
+						maksimal bagi para pengunjung</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="box-icon wow fadeInUp" data-wow-delay="0.1s">
 					<div class="icon"><img src="<?= base_url() ?>assets/front/images/item-background/meeting-room.png" alt=""></div>
-					<div class="title"><a href="#">Fasilitas Serbaguna untuk Berbagai Acara</a></div>
-					<p>Dari pertemuan bisnis hingga acara keluarga, ruang serbaguna di Zafira Garden Lounge dapat disesuaikan dengan berbagai kebutuhan, menawarkan fleksibilitas bagi setiap acara.</p>
+					<div class="title"><a href="#">Fasilitas Serbaguna untuk Acara</a></div>
+					<p>Ruang serbaguna di Zafira Garden Lounge dapat disesuaikan untuk berbagai kebutuhan.
+						Fleksibilitas ini menjadikan tempat kami pilihan tepat untuk beragam acara.
+					</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="box-icon wow fadeInUp" data-wow-delay="0.2s">
 					<div class="icon"><img src="<?= base_url() ?>assets/front/images/item-background/vip.png" alt=""></div>
-					<div class="title"><a href="#">Layanan Fast-Track untuk Kemudahan</a></div>
-					<p>Pengunjung dapat menikmati layanan fast-track menuju terminal, memastikan pengalaman perjalanan yang cepat dan tanpa hambatan.</p>
+					<div class="title"><a href="#">Akses Check-In untuk Kemudahan Perjalanan</a></div>
+					<p>Nikmati service Akses Check in langsung ke terminal, memberikan kemudahan dan
+						kenyamanan dengan proses perjalanan yang lebih cepat dan efisien.
+					</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="box-icon wow fadeInUp mb-0" data-wow-delay="0.3s">
 					<div class="icon"><img src="<?= base_url() ?>assets/front/images/item-background/serving-dish.png" alt=""></div>
-					<div class="title"><a href="#">Hidangan Lezat dan Variasi Menu</a></div>
-					<p>Zafira Garden Lounge menyediakan pilihan makanan dan minuman yang lezat, mulai dari camilan hingga hidangan lengkap, memenuhi berbagai selera pengunjung.</p>
+					<div class="title"><a href="#">Pilihan Menu</a></div>
+					<p>Zafira Garden Lounge menyajikan beragam pilihan makanan dan minuman, dari camilan
+						hingga hidangan lengkap, yang disiapkan untuk memuaskan berbagai selera pengunjung.
+					</p>
 				</div>
 			</div>
 		</div>

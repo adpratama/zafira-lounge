@@ -1,11 +1,10 @@
 <!-- banner-page -->
 <div class="banner-page inner-page about" style="background-image: url('<?= base_url('assets/front/images/about/cover.jpg') ?>')">
     <div class="content">
-        <div class="banner-text">about us</div>
-        <p>
-            Need food and a good place to eat? Welcome to our humble
-            place where you can eat <br />
-            good food peacefully.
+        <div class="banner-text">Sekilas tentang kami</div>
+        <p>Di tengah kesibukan bandara, Zafira Garden Lounge adalah tempat ideal untuk menunggu
+            penerbangan atau kembali dari perjalanan. <br> Fasilitas nyaman dan layanan ramah membuat
+            awal dan/atau akhir perjalanan Anda lebih menyenangkan
         </p>
     </div>
 </div>

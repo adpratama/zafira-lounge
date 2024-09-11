@@ -184,7 +184,9 @@
 						</div>
 						<div class="col-md-4">
 							<div class="footer-center">
-								<p>A distinctive, well-preserved and comfortable space, high-quality products, authentic cuisine, food and drinks are done flawlessly.</p>
+								<p>Zafira Garden Lounge menawarkan ruang yang nyaman dengan pilihan hidangan khas
+									Indonesia. Setiap detail dirancang untuk memberikan pengalaman terbaik bagi para
+									pengunjung.</p>
 								<div class="widget-social-text">
 									<ul class="flex-wrap">
 										<li><a href="#">facebook</a></li>
