@@ -79,7 +79,7 @@
 
 <div class="wg-video-full" style="background-image: url(<?= base_url() ?>assets/front/images/bg-section/bg-video-1.jpg);">
 	<div class="video-wrap">
-		<a href="https://www.youtube.com/watch?v=UAMRv_H4seo" class="popup-youtube">
+		<a href="https://www.youtube.com/watch?v=hQYEcxRcu3g" class="popup-youtube">
 			<div class="icon">
 				<i class="icon-play3"></i>
 			</div>
