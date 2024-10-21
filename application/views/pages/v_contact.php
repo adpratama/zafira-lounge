@@ -26,7 +26,7 @@
                         <div class="image"><img src="<?= base_url() ?>assets/front/images/item-background/call.png" alt=""></div>
                         <div class="title">Contact Us</div>
                         <p>
-                            Phone: +2 650-603-0553 <br>
+                            Phone: +62 817-5721-732 <br>
                             Email: admin.sales@zafiralounge.com
                         </p>
                     </div>

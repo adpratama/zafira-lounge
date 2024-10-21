@@ -61,7 +61,7 @@
 							</div>
 							<div class="content">
 								<p class="tf-color">Hubungi kami</p>
-								<p class="number-phone">TBA</p>
+								<p class="number-phone">+62 817-5721-732</p>
 							</div>
 						</div>
 					</div>
@@ -189,9 +189,7 @@
 									pengunjung.</p>
 								<div class="widget-social-text">
 									<ul class="flex-wrap">
-										<li><a href="#">facebook</a></li>
-										<li><a href="#">instagram</a></li>
-										<li><a href="#">tripadvisor</a></li>
+										<li><a href="https://www.instagram.com/zafira.garden/">instagram</a></li>
 									</ul>
 								</div>
 							</div>
