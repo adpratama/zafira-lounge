@@ -38,7 +38,7 @@
                         <p>
                             Ex Gedung TKI, Terminal Keberangkatan,<br>
                             Jalan Bandara Adi Soemarno,<br>
-                            Kecamatan Ngeplak, Kota Surakarta,<br>
+                            Kecamatan Ngemplak, Kota Surakarta,<br>
                             Jawa Tengah 57108
                         </p>
                     </div>

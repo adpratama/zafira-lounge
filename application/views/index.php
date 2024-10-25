@@ -38,7 +38,7 @@
 							<div class="content">
 								<p class="tf-color">Ex Gedung TKI, Terminal Keberangkatan, </p>
 								<p>Jalan Bandara Adi Soemarno,</p>
-								<p>Kecamatan Ngeplak, Kota Surakarta,</p>
+								<p>Kecamatan Ngemplak, Kota Surakarta,</p>
 								<p>Jawa Tengah 57108</p>
 							</div>
 						</div>
@@ -177,7 +177,7 @@
 
 								<p>Ex Gedung TKI, Terminal Keberangkatan, <br>
 									Jalan Bandara Adi Soemarno,<br>
-									Kecamatan Ngeplak, Kota Surakarta,<br>
+									Kecamatan Ngemplak, Kota Surakarta,<br>
 									Jawa Tengah 57108
 								</p>
 							</div>
